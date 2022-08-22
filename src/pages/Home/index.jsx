@@ -24,7 +24,7 @@ export default function Home() {
 
     return (
         <div className="container">
-            <h1 className="title">Pokédex</h1>
+            <h1 className="title">Pokédex - DH</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     className="search"
@@ -37,7 +37,7 @@ export default function Home() {
             <ul className='list'>
                 {
                     pokemonsFilters.map((item, index) => (
-                        <li className='items'>
+                        <li key={item.name} className='items'>
                             <img
                                 className='image'
                                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png`}
