@@ -1,6 +1,7 @@
 import './styles.css';
 import axios from 'axios';
 import * as React from 'react';
+import Card from '../../components/Card';
 
 export default function Home() {
 
@@ -24,7 +25,7 @@ export default function Home() {
 
     return (
         <div className="container">
-            <h1 className="title">Pokédex - DH</h1>
+            <h1 className="title">Pokédex</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     className="search"
@@ -34,20 +35,7 @@ export default function Home() {
                     value={input}
                 />
             </form>
-            <ul className='list'>
-                {
-                    pokemonsFilters.map((item, index) => (
-                        <li key={item.name} className='items'>
-                            <img
-                                className='image'
-                                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png`}
-                                alt={item.name}
-                            />
-                            <p className='name'>{item.name}</p>
-                        </li>
-                    ))
-                }
-            </ul>
+            <Card pokemonsFilters={pokemonsFilters} />
         </div>
     )
 }

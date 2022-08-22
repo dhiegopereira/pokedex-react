@@ -1,0 +1,35 @@
+.list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.items {
+    width: 150px;
+    background-color: #cdecff;
+    box-shadow: 4px 4px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 300ms ease;
+}
+
+.items:hover {
+    transform: scale(1.1);
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.image {
+    width: 90px;
+    margin-top: 20px;
+    filter: saturate(2);
+}
